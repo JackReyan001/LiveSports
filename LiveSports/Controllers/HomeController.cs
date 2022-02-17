@@ -47,10 +47,12 @@ namespace LiveSports.Controllers
         {
             return View(); 
         }
-        //public IActionResult Domestic()
-        //{
-        //    return View();
-        //}
+
+        public IActionResult DomesticCricket()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
