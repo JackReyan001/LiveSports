@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+<head>
+</head>
+<body>
+    <pre>
+
+
+</pre>
+    <div class="container-fluid text-center border" style="font-size:x-large">
+        <b>
+          <h3>GET IN TOUCH</h3>
+        </b>
+    </div>
+    <pre>
+
+
+</pre>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <div class="mb-3">
+                        <label for="exampleInputName1" class="form-label">Enter Your Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputNumber1" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone">
+                    </div>
+
+            
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+
+            </div>
+            <div class="col-sm-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.374104151781!2d77.4003241144039!3d28.498390196891695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce85e51715a75%3A0x4ac78e96e456c14!2sCognizant!5e0!3m2!1sen!2sin!4v1644239547996!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+               function sendEmail(){
+             Email.send({
+            Host: "smtp.gmail.com",
+            Username: "ipiyushag22@gmail.com",
+            Password: "Piyush@123",
+            To: 'ipiyushag22@gmail.com',
+            From: document.getElementById("exampleInputEmail1").value,
+            Subject: "Client Interaction",
+            Body: "Name:" + document.getElementById("name").value
+                + "<br> Email:" + document.getElementById("exampleInputEmail1").value
+            +"<br> Phone Number:"+ document.getElementById("phone").value
+        }).then(
+            message => alert("We will get back to you...")
+        );
+    }
+    </script>
+    </body>
+</html>

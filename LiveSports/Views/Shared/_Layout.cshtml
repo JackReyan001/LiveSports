@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LiveSports</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="dark-mode.css">
+    <style>
+        .drop-down2 {
+            position: relative;
+        }
+
+            .drop-down2 .dropdown-toggle {
+                color: #000 !important;
+                padding: .25rem 1.5rem !important;
+            }
+
+            .drop-down2 .sub-menu2 {
+                position: absolute;
+                top: 0;
+                left: 100%;
+            }
+
+        @@media screen and (max-width:767px) {
+            .drop-down2 .sub-menu2 {
+                position: static;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#28282B">
+     <a asp-controller="Home" asp-action="Index"><img src="~/img/clipart2614717.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top"></a>
+        <span class="collapse navbar-collapse text-light" style="font-size: xx-large; font-family: 'Brush Script MT', cursive; ">
+            <b>&nbsp;Live Sports</b>
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-left" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        All Sports
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" asp-controller="Home" asp-action="Football" >Football</a>
+
+
+                        <a class="dropdown-item" href="#">Tennis</a>
+                        <div class="nav-item dropdown drop-down2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Cricket
+                            </a>
+                            <div class="dropdown-menu sub-menu2" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item"  href="#">Domestic</a>
+                                @*<div class="nav-item dropdown  drop-down3">*@
+                                    <a class="dropdown-item"  asp-controller="Home" asp-action="InternationalCricket"  >
+                                        International
+                                    </a>
+                                    @*<div class="dropdown-menu sub-menu2" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Score</a>
+                                        <a class="dropdown-item" href="#">Matches</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>*@
+                                @*</div>*@
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Membership">Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="News">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                </li>
+                &nbsp;&nbsp;
+                <li class="nav-item">
+                    <button class="btn">
+                        <div class="custom-control custom-switch">
+                             <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                             <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
+                        </div>
+                    </button>
+
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login/SingnUp</button>
+            </form>
+        </div>
+    </nav>
+
+    @*<img src="~/img/sports12.jpg" class="img-fluid">*@
+
+
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+
+        <div class="container">*@
+
+    <footer>
+        <div class="footer-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Live Sports</h3>
+                        <ul>
+                            <li><a href="#">Cricket</a></li>
+                            <li><a href="#">Football</a></li>
+                            <li><a href="#">Tennis</a></li>
+                            <li><a href="#">Basketball</a></li>
+                            <li><a href="#">More</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Sports">Sports</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Membership">Membership</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="News">News</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Contact Us</h3>
+                        <p>
+                            Cognizant Technology Solution
+                            No. 5 & 6, Thane - Belapur Rd, MIDC INDL Area, Airoli, Navi Mumbai, Maharashtra 400708
+                        </p>
+                    </div>
+                    @*<div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>*@
+                </div>
+                <div>
+                    <p class="copyright"> © 2022 - LiveSports - Designed by POD-C(Sushanth,Sayali,Mrunal,Rushabh,Piyush) </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="dark-mode-switch.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script type="text/javascript">
+        $(".dropdown-menu a.dropdown-toggle").on('click', function () {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents(".dropdown-menu").first().find(".show").removeClass("show");
+            }
+
+            var $subMenu = $(this).next('.dropdown-menu');
+            $subMenu.toggleClass("show");
+
+
+            $(this).parents("li.nav-item.dropdown.show").on('hidden.bs.dropdown', function (e) {
+                $(".dropdown-submenu .show").removeClass("show");
+            });
+
+            return false;
+        });
+
+
+    </script>
+</body>
+</html>
