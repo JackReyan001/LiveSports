@@ -44,6 +44,10 @@ namespace LiveSports.Controllers
         {
             return View();
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
         public IActionResult Football()
         {
             return View();
