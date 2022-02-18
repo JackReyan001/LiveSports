@@ -30,6 +30,7 @@
         }
     </style>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link id="dark-theme-style" rel="stylesheet" />
 
 
 </head>
@@ -63,7 +64,7 @@
                             </a>
                             <div class="dropdown-menu sub-menu2" aria-labelledby="navbarDropdown">
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-controller="Home" asp-action="DomesticCricket">Domestic</a>
+                                <a class="dropdown-item"   asp-controller="Home" asp-action="DomesticCricket">Domestic</a>
                                 @*<div class="nav-item dropdown  drop-down3">*@
                                 <a class="dropdown-item" asp-controller="Home" asp-action="InternationalCricket">
                                     International
@@ -86,6 +87,7 @@
                 <li class="nav-item">
                     <a class="nav-link" asp-controller="Home" asp-action="News">News</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" asp-controller="Home" asp-action="Gallery">Gallery</a>
                 </li>
@@ -95,17 +97,15 @@
 
                 &nbsp;&nbsp;
                 <li class="nav-item">
-                    <button class="btn">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="darkSwitch">
-                            <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
-                        </div>
-                    </button>
+                    <a href="javascript:void()"
+                       class="btn btn-outline-info btn-lg ml-auto font-weight-bold"
+                       id="theme-toggler" onclick="toggleTheme()" style="-webkit-border-radius:30%">
+                    </a>
 
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-               <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Login/SingnUp</button>
+               <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Login/SingnUp</button>
             </form>
         </div>
     </nav>

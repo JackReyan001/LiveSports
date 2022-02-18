@@ -11,21 +11,18 @@ namespace LiveSports.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> ILogger;
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+            ILogger = logger;
         }
 
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Gallery()
-        {
-            return View();
-        }
+        
 
         public IActionResult News()
         {
@@ -36,6 +33,10 @@ namespace LiveSports.Controllers
             return View();
         }
         public IActionResult ContactUs()
+        {
+            return View();
+        }
+        public IActionResult Gallery()
         {
             return View();
         }
