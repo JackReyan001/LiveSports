@@ -75,7 +75,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
 }
 .footer {
   position: absolute;
@@ -218,57 +218,9 @@ p {
     flex: 20%;
     /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
-.card {
+.card, .jumbotron {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 iframe{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-/* gallery*/
-/*body {
-    font-family: sans-serif;
-}
-.*/
-.Gallery-g h1 {
-    text-align: center;
-    color: black;
-    text-decoration: none;
-    padding: 5px 20px;
-    font-family: sans-serif;
-    margin: 30px 0 50px;
-   
-}
-
-.gallery {
-    margin: 10px 50px;
-    height: 90vh;
-    max-width: 90vw;
-}
-
-    .gallery img {
-        width: 230px;
-        padding: 5px;
-        filter: grayscale(100%);
-        transition: 1s;
-    }
-
-        .gallery img:hover {
-            filter: grayscale(0);
-            transform: scale(1.1);
-        }
-
-#lightbox-container-image-box {
-    max-width: 80%;
-    height: 100% !important;
-}
-
-#lightbox-container-image img {
-    max-width: 100%;
-}
-
-#lightbox-container-image-data-box {
-    max-width: 80%;
-    margin-bottom: 50px;
 }
