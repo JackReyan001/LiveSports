@@ -22,7 +22,7 @@ namespace LiveSports.Controllers
         {
             return View();
         }
-        public IActionResult Gallery => View();
+        
 
         public IActionResult News()
         {
